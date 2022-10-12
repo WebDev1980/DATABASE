@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+	<link rel="shortcut icon" href="a198cd0c_e2f0_4c99_ba51_342624a24db9_WP4_icon.ico" type="image/x-icon"/>
+	<link href = "https://fonts.googleapis.com/css?family=Nunito+Sans:400,900&display=swap" rel="stylesheet">
+	<title>HTML DATABASE</title>
+	
+	<style>
+	* {
+	  box-sizing: border-box;
+	}
+	body,#dataInput{text-align: center;}
+	#dataInput {
+	  background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Vector_search_icon.svg/221px-Vector_search_icon.svg.png');
+	  background-position: 10px 10px;;
+	  background-repeat: no-repeat;
+	  background-size: 25px;
+	  width: 60%;
+	  font-size: 16px;
+	  padding: 12px 20px 12px 40px;
+	  border: 1px solid #ddd;
+	  margin-bottom: 12px;
+	  border-radius: 25px;
+	}
+	#dataInput:focus {
+	  outline:none
+	}
+	#dataTable {
+	  border-collapse: collapse;
+	  width: 85%;
+	  border: 1px solid #ddd;
+	  font-size: 15px;
+	  margin-bottom:40px;
+	}
+	#dataTable th, #dataTable td {
+	  text-align: left;
+	  padding: 12px;
+	  text-align: center;
+	
+	}
+	#dataTable tr {
+	  border-bottom: 1px solid #ddd;
+	
+	}
+	#dataTable tr.header, #dataTable tr:hover {
+	  background-color: #f1f1f1;
+	
+	}
+	a {
+	  color: #f56642;
+	}
+	
+	h2, h1, p {
+	  font-family: 'Nunito Sans', sans-serif;
+	}
+	h1:hover {
+	  animation-name: artshadow;
+	  animation-timing-function: ease-in-out;
+	  animation-fill-mode: both;
+	  animation-duration: 0.5s;
+	  animation-delay: 0.1s;
+	}
+	
+	@keyframes artshadow {
+	  from {}
+	  to {text-shadow: 2px 2px 5px black;}
+	}
+	h1 {
+	  color: #f56642;
+	  transition: 0.3s;
+	}
+	::placeholder {
+		color: rgb(174, 171, 171);
+	}
+	.fa {
+		  font-size: 10em;
+		  margin-bottom: 20px;
+		}
+	/* .tablesearch {
+		display: none;
+	} */
+	</style>
+	</head>
+	<body>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<h1><b>HTML</b></h1>
+	<h2>User DataBase</h2>
+	<div class="centerenter">
+	<input type="text" id="dataInput" onkeyup="searchFilter()" onblur="getVal()" placeholder="*ID" name="input-id">
+	</div>
+
+	<div class="tablesearch">
+	<table id="dataTable" align="center">
+	<tr class="header">
+	<th style="width:35%">ID</th>
+	<th style="width:25%">NAME</th>
+	<th style="width:20%">DATE</th>
+	<th style="width:20%">HOUR</th>
+	</tr>
+	<tr>
+		<td>56iny4cb-nq3c-78bx-6m97-vmr9jbzr46d0</td>
+		<td>ANDY JACKSON</td>
+		<td>05/11/2022</td>
+		<td>11:22:39</td>
+	</tr>
+	<tr>
+		<td>66iny4cb-nq3c-78bx-6m97-vmr9jbzr46d0</td>
+		<td>RICKY MORSE</td>
+		<td>03/29/2022</td>
+		<td>10:52:33</td>
+	</tr>
+	<tr>
+		<td>76iny4cb-nq3c-78bx-6m97-vmr9jbzr46d0</td>
+		<td>EMMA WHITE</td>
+		<td>01/21/2022</td>
+		<td>09:52:59</td>
+	</tr>
+	<tr>
+		<td>86iny4cb-nq3c-78bx-6m97-vmr9jbzr46d0</td>
+		<td>ROSE PELOSY</td>
+		<td>10/13/2022</td>
+		<td>10:42:39</td>
+	</tr>
+	<tr>
+		<td>96iny4cb-nq3c-78bx-6m97-vmr9jbzr46d0</td>
+		<td>KEN SANDMAN</td>
+		<td>09/26/2022</td>
+		<td>11:54:39</td>
+	</tr>
+	</table>
+	</div>
+	
+	<div class="table-cell">
+		<section class="doc-img-wrapper">
+			<div class="docto-img-wrapper_">
+			<i class="fa fa-file" aria-hidden="true"></i>
+			</div>
+		</section>
+		<div class="table-cell_">
+			<div class="container2">
+				<div class="table-wrapper">
+					<h5 class="tag0"><span>Name:</span></h5>
+					<p id="name_" class="tag">NAME HERE</p>
+				</div>
+					
+				<div class="table-wrapper table-wrapper-mod">
+					<h5 class="tag0 tag-padding"><span>Folio:</span></h5>
+					<p id="invoice_" class="tag">ID HERE</p>
+				</div>
+			</div>
+			<div class="container2">
+				<div class="table-wrapper table-wrapper-mod">
+					<h5 class="tag0 tag-padding"><span>Log Date:</span></h5>
+					<p id="date_" class="tag">DATE & HOUR HERE</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+	// let getValue = document.getElementById("dataInput").value;
+	// console.log(getValue)
+
+	// SEARCH FILTER
+	function searchFilter() {
+		let input, filter, table, tr, td, i, txtValue;
+			input = document.getElementById("dataInput");
+			filter = input.value.toUpperCase();
+			table = document.getElementById("dataTable");
+			tr = table.getElementsByTagName("tr");
+		for (i = 0; i < tr.length; i++) {
+			td = tr[i].getElementsByTagName("td")[0];
+			if (td) {
+			txtValue = td.textContent || td.innerText;
+			// console.log(txtValue)
+		if (txtValue.toUpperCase().indexOf(filter) > -1) {
+			tr[i].style.display = "";
+		} else {
+			tr[i].style.display = "none";
+		}
+		}       
+		}
+	}
+	//  ****************************************************** 
+	//  ****************************************************** 
+	// COVERTING HTML TABLE TO ARRAY (JQUERY LIBRARY SCRIPT)
+	var rows = [].slice.call($('table')[0].rows) 
+	var keys = [].map.call(rows.shift().cells, function(e) { 
+		return e.textContent.replace(/\s/g, '') 
+	}) 
+	var persons = rows.map(function(row) { 
+		return [].reduce.call(row.cells, function(o, e, i) { 
+			o[keys[i]] = e.textContent 
+			return o 
+			}, {}) }) 
+			console.log(persons)  
+	//  ******************************************************    
+	//  ******************************************************   
+	// GETTING AND PLACING THE SEARCHED INFO  
+	function getVal() { 
+	// GETTING VALUE FROM INPUT TEXT ELEMENT BY KEYUP FUNCTION
+	// const val = document.querySelector('[name="input-search]').value;
+	const val = document.querySelector('input').value;  
+		// console.log(val);  
+	// GETTING ADJACENT VALUE ACCORDING TO SERCH CRITERIA
+	let person = persons.find(person => person.ID === val);
+		console.log(person.ID);
+		console.log(person.NAME);
+		console.log(person.DATE); 
+		console.log(person.HOUR);
+	//  PLACING ARRAY VALUES INTO AN HTML ELEMENT BY ID BASED ON SEARCH CRITERIA
+		document.getElementById("invoice_").innerHTML = person.ID;
+		document.getElementById("name_").innerHTML = person.NAME;
+		document.getElementById("date_").innerHTML = person.DATE + " " + person.HOUR;   
+	}
+	</script>
+    
+    
+	</body>
+	</html>
